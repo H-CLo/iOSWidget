@@ -1,5 +1,6 @@
 # iOS - Widget
 [Apple widget 官網](https://developer.apple.com/design/human-interface-guidelines/ios/extensions/widgets/)
+[App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/Today.html)
 
 ![](https://i.imgur.com/pPRx5YA.png)
 
@@ -8,6 +9,10 @@ A widget is an extension that displays a small amount of timely, useful informat
 ## 基本設定
 
 ## 畫面設定
+
+>  NOTE: 
+> <br> 1. Avoid putting a scroll view inside a Today widget. It’s difficult for users to scroll within a widget without inadvertently scrolling the Today view.
+> <br> 2. No keyboard entry
 
 ## 資料傳遞
 
