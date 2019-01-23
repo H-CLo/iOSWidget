@@ -32,5 +32,9 @@ A widget is an extension that displays a small amount of timely, useful informat
 
 ## 資料傳遞
 
+**UserDafualt**
+
+**FileManager**
+
 ## 參考
 > https://medium.com/nine9devtw/ios-today-extension-swift-%E6%95%99%E5%AD%B8%E7%AD%86%E8%A8%98-5361446d1950
