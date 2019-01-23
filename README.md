@@ -24,6 +24,12 @@ A widget is an extension that displays a small amount of timely, useful informat
 > <br> 1. Avoid putting a scroll view inside a Today widget. It’s difficult for users to scroll within a widget without inadvertently scrolling the Today view.
 > <br> 2. No keyboard entry
 
+## 打開App
+
+1. 設定urlScheme在要被開啟的App
+
+2. 透過 **NSExtensionContext** 裡頭的 **openURL:completionHandler:** 去執行
+
 ## 資料傳遞
 
 ## 參考
