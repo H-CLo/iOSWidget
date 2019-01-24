@@ -16,6 +16,18 @@ A widget is an extension that displays a small amount of timely, useful informat
 
 - Perform well (in particular, iOS widgets must use memory wisely or the system may terminate them)
 
+## 替換初始畫面
+
+在**info.plist**裡頭有段叫**NSExtension**，將 **NSExtensionMainStoryboard** 修改為 **NSExtensionPrincipalClass**
+<br>並且填上你要使用的畫面，如下
+
+    <dict>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.widget-extension</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>TodayViewController</string>
+    </dict>
+
 ## 畫面設定
 
 **每次啟動Widget時，可以透過此事件更新畫面資料 [widgetPerformUpdateWithCompletionHandler:](https://developer.apple.com/documentation/notificationcenter/ncwidgetproviding/1490262-widgetperformupdatewithcompletio)**
@@ -32,6 +44,12 @@ A widget is an extension that displays a small amount of timely, useful informat
 > <br>1. Widget畫面的初始高度，就是110，最大不會超過畫面的高度
 > <br>2. 請盡量避免放進去有關ScrollView元件
 > <br>3. Widget沒有鍵盤功能
+
+## 顯示更多
+
+**執行 widgetActiveDisplayModeDidChange的協定，並在裡頭客製化自己要的畫面大小**
+
+    preferredContentSize = CGSize(width: maxSize.width, height: 110)
 
 ## 打開App
 
